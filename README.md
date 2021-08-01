@@ -4,7 +4,7 @@ Information on COVID-19 and vaccines in Kobe City and related data.
 
 ## ライセンス
 
-本ソフトウェアは、[MIT ライセンス](./LICENSE.txt)の元提供されています。
+本ソフトウェアは、[MIT ライセンス](https://github.com/1k-ct/kobe-COVID-19/blob/main/LICENSE)の元提供されています。
 
 ## リンク先
 
