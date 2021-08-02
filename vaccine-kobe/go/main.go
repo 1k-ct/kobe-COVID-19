@@ -7,23 +7,28 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/joho/godotenv"
 	"golang.org/x/xerrors"
 )
 
 type Article struct {
-	Item []struct {
-		ID          int    `json:"id"`
-		Name        string `json:"name"`
-		Interval    int    `json:"interval"`
+	Articles []struct {
+		ID          int         `json:"id"`
+		Category    interface{} `json:"category"`
+		Header      string      `json:"header"`
+		Description string      `json:"description"`
+		URL         interface{} `json:"url"`
+		Body        string      `json:"body"`
 		Information struct {
-			Message             string `json:"message"`
-			DisplayedNameKana   string `json:"displayed_name_kana"`
-			VaccineManufacturer string `json:"vaccine_manufacturer"`
+			Important bool `json:"important"`
 		} `json:"information"`
-	} `json:"item"`
+		CreatedAt time.Time `json:"created_at"`
+		UpdatedAt time.Time `json:"updated_at"`
+	} `json:"articles"`
 }
+
 type Department struct {
 	Department []struct {
 		ID          int    `json:"id"`
@@ -66,17 +71,176 @@ func main() {
 	if err := godotenv.Load(); err != nil {
 		log.Fatal(err)
 	}
-	baseUrl := os.Getenv("BASE")
-	baseUrl = baseUrl + "item/"
-	item, err := FetchItem(baseUrl, "a")
+	URL := os.Getenv("BASE")
+
+	f := New("article")
+	article, err := FetchArticle(URL, f)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalf("%+v\n", err)
 	}
-	fmt.Println(item.Item[0].Name)
+	fmt.Println(article.Articles[0].ID)
+
+	f = New("department")
+	department, err := FetchDepartment(URL, f)
+	if err != nil {
+		log.Fatalf("%+v\n", err)
+	}
+	fmt.Println(department.Department[0].Name)
+
+	f = New("availableDepartment")
+	availableDepartment, err := FetchAvailableDepartment(URL, f)
+	if err != nil {
+		log.Fatalf("%+v\n", err)
+	}
+	fmt.Println(availableDepartment.DepartmentList[0])
+
+	f = New("itemList")
+	itemList, err := FetchItemList(URL, f)
+	if err != nil {
+		log.Fatalf("%+v\n", err)
+	}
+	fmt.Println(itemList.Item[0].Name)
 }
 
-func FetchItem(baseUrl string, contentType string) (*ItemList, error) {
-	res, err := http.Get(baseUrl)
+// ----------------
+
+type Fetcher interface {
+	FetchItem(url string) (interface{}, error)
+}
+
+var (
+	article             = Article{}
+	department          = Department{}
+	availableDepartment = AvailableDepartment{}
+	itemList            = ItemList{}
+)
+
+func New(contentType string) Fetcher {
+	switch contentType {
+	case "article":
+		return article
+	case "department":
+		return department
+	case "availableDepartment":
+		return availableDepartment
+	case "itemList":
+		return itemList
+	default:
+		return nil
+	}
+}
+
+// --------------------
+
+func FetchArticle(url string, f Fetcher) (*Article, error) {
+	url = url + "articles/"
+	obj, err := f.FetchItem(url)
+	if err != nil {
+		return nil, xerrors.New(err.Error())
+	}
+	article, ok := obj.(*Article)
+	if !ok {
+		return nil, xerrors.New("type failed")
+	}
+	return article, nil
+}
+func (Article) FetchItem(url string) (interface{}, error) {
+	res, err := http.Get(url)
+	if err != nil {
+		return nil, xerrors.New(err.Error())
+	}
+	defer res.Body.Close()
+	robots, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		return nil, xerrors.New(err.Error())
+	}
+
+	item := &Article{}
+
+	if err := json.Unmarshal(robots, item); err != nil {
+		err := xerrors.New("JSON Unmarshal error:")
+		return nil, xerrors.New(err.Error())
+	}
+	return item, nil
+}
+
+// ---------
+func FetchDepartment(url string, f Fetcher) (*Department, error) {
+	url = url + "department/"
+	obj, err := f.FetchItem(url)
+	if err != nil {
+		return nil, xerrors.New(err.Error())
+	}
+	department, ok := obj.(*Department)
+	if !ok {
+		return nil, xerrors.New("type failed")
+	}
+	return department, nil
+}
+func (Department) FetchItem(url string) (interface{}, error) {
+	res, err := http.Get(url)
+	if err != nil {
+		return nil, xerrors.New(err.Error())
+	}
+	defer res.Body.Close()
+	robots, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		return nil, xerrors.New(err.Error())
+	}
+
+	item := &Department{}
+
+	if err := json.Unmarshal(robots, item); err != nil {
+		err := xerrors.New("JSON Unmarshal error:")
+		return nil, xerrors.New(err.Error())
+	}
+	return item, nil
+}
+func FetchAvailableDepartment(url string, f Fetcher) (*AvailableDepartment, error) {
+	url = url + "available_department/"
+	obj, err := f.FetchItem(url)
+	if err != nil {
+		return nil, xerrors.New(err.Error())
+	}
+	availableDepartment, ok := obj.(*AvailableDepartment)
+	if !ok {
+		return nil, xerrors.New("type failed")
+	}
+	return availableDepartment, nil
+}
+func (AvailableDepartment) FetchItem(url string) (interface{}, error) {
+	res, err := http.Get(url)
+	if err != nil {
+		return nil, xerrors.New(err.Error())
+	}
+	defer res.Body.Close()
+	robots, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		return nil, xerrors.New(err.Error())
+	}
+
+	item := &AvailableDepartment{}
+
+	if err := json.Unmarshal(robots, item); err != nil {
+		err := xerrors.New("JSON Unmarshal error:")
+		return nil, xerrors.New(err.Error())
+	}
+	return item, nil
+}
+func FetchItemList(url string, f Fetcher) (*ItemList, error) {
+	url = url + "item/"
+	obj, err := f.FetchItem(url)
+	if err != nil {
+		return nil, xerrors.New(err.Error())
+	}
+	itemList, ok := obj.(*ItemList)
+	if !ok {
+		return nil, xerrors.New("type failed")
+	}
+	return itemList, nil
+}
+func (ItemList) FetchItem(url string) (interface{}, error) {
+	res, err := http.Get(url)
 	if err != nil {
 		return nil, xerrors.New(err.Error())
 	}
