@@ -2,18 +2,18 @@ import json
 import csv
 import requests
 import io
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
 
 
-def fetch_csv_file(CSV_URL: str):
-    r = requests.get(CSV_URL)
-    r.encoding = 'cp932'
-    csvio = io.StringIO(r.text, newline="")
-    return csvio
-
-
-def parse_CSV_to_JSON(csv_data: io.StringIO) -> dict:
+def parse_CSV_to_JSON(CSV_URL: str) -> dict:
     json_data = {}
     json_list = []
+
+    r = requests.get(CSV_URL)
+    r.encoding = 'cp932'
+    csv_data = io.StringIO(r.text, newline="")
 
     for row in csv.DictReader(csv_data):
         json_list.append(row)
@@ -23,13 +23,12 @@ def parse_CSV_to_JSON(csv_data: io.StringIO) -> dict:
 
 def load_JSON(json_data: dict, json_file: str):
     with open(json_file, 'w', encoding="utf-8") as f:
-        json.dump(json_data, f, ensure_ascii=False, indent=2)
+        json.dump(json_data, f, ensure_ascii=False, indent=4)
 
 
 def script_load_positive_cases():
     CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kansensya.csv"
-    csv_data = fetch_csv_file(CSV_URL)
-    json_data = parse_CSV_to_JSON(csv_data)
+    json_data = parse_CSV_to_JSON(CSV_URL)
     json_file = "data/kansensya.json"
     load_JSON(json_data, json_file)
     return
@@ -37,8 +36,7 @@ def script_load_positive_cases():
 
 def script_load_positivity_rate_in_testing():
     CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kensa.csv"
-    csv_data = fetch_csv_file(CSV_URL)
-    json_data = parse_CSV_to_JSON(csv_data)
+    json_data = parse_CSV_to_JSON(CSV_URL)
     json_file = "data/kensa.json"
     load_JSON(json_data, json_file)
     return
@@ -46,17 +44,44 @@ def script_load_positivity_rate_in_testing():
 
 def script_load_details_of_test_positives():
     CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kansensyazokusei.csv"
-    csv_data = fetch_csv_file(CSV_URL)
-    json_data = parse_CSV_to_JSON(csv_data)
+    json_data = parse_CSV_to_JSON(CSV_URL)
     json_file = "data/kansensyazokusei.json"
     load_JSON(json_data, json_file)
     return
+
+
+def setting():
+    load_dotenv(verbose=True)
+
+    dotenv_path = join(dirname(__file__), ".env")
+    load_dotenv(dotenv_path)
+    return os.environ.get("URL")
+
+
+def fetch_load_json(URL: str, file_path: str):
+    r = requests.get(URL)
+
+    data = r.json()
+
+    with open(file_path, 'w', encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
 
 
 def main():
     script_load_details_of_test_positives()
     script_load_positive_cases()
     script_load_positivity_rate_in_testing()
+
+    BASE_URL = setting()
+    URL = f"{BASE_URL}/available_date/?department_id=8769&item_id=3&year=2021&month=8"
+    fetch_load_json(URL, "data/month-8-all.json")
+
+    BASE_URL = setting()
+    # start_date_after = "07-15"
+    start_date_after = "08-01"
+    start_date_before = "08-02"
+    URL = f"{BASE_URL}/reservation_frame/?department_id=8769&item_id=3&start_date_after=2021-{start_date_after}&start_date_before=2021-{start_date_before}"
+    fetch_load_json(URL, "data/date-details.json")
 
 
 if __name__ == "__main__":
