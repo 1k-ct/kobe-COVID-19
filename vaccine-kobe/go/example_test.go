@@ -1,12 +1,13 @@
 package main
 
 import (
-	"fmt"
-	"log"
+	"encoding/json"
+	"io/ioutil"
 	"os"
 	"testing"
 
 	"github.com/joho/godotenv"
+	"golang.org/x/xerrors"
 )
 
 func baseURL() string {
@@ -16,44 +17,71 @@ func baseURL() string {
 	URL := os.Getenv("BASE")
 	return URL
 }
+func writeFile(filename string, obj interface{}) error {
+	buf, err := json.Marshal(obj)
+	if err != nil {
+		return xerrors.New(err.Error())
+	}
+	if err := ioutil.WriteFile("./../../test/"+filename, buf, 0666); err != nil {
+		return xerrors.New(err.Error())
+	}
+	return nil
+}
 func TestMain(t *testing.T) {
-	if err := godotenv.Load(); err != nil {
-		log.Fatal(err)
-	}
-	URL := os.Getenv("BASE")
+	// if err := godotenv.Load(); err != nil {
+	// 	log.Fatal(err)
+	// }
+	// URL := os.Getenv("BASE")
 
-	f := New("article")
-	article, err := FetchArticle(URL, f)
-	if err != nil {
-		log.Fatalf("%+v\n", err)
-	}
-	fmt.Println(article.Articles[0].ID)
+	// f := New("article")
+	// article, err := FetchArticle(URL, f)
+	// if err != nil {
+	// 	log.Fatalf("%+v\n", err)
+	// }
+	// fmt.Println(article.Articles[0].ID)
 
-	f = New("department")
-	department, err := FetchDepartment(URL, f)
-	if err != nil {
-		log.Fatalf("%+v\n", err)
-	}
-	fmt.Println("id", department.Department[0].ID)
+	// f = New("department")
+	// department, err := FetchDepartment(URL, f)
+	// if err != nil {
+	// 	log.Fatalf("%+v\n", err)
+	// }
+	// fmt.Println("id", department.Department[0].ID)
 
-	f = New("availableDepartment")
-	availableDepartment, err := FetchAvailableDepartment(URL, f)
-	if err != nil {
-		log.Fatalf("%+v\n", err)
-	}
-	fmt.Println(availableDepartment.DepartmentList[0])
+	// f = New("availableDepartment")
+	// availableDepartment, err := FetchAvailableDepartment(URL, f)
+	// if err != nil {
+	// 	log.Fatalf("%+v\n", err)
+	// }
+	// fmt.Println(availableDepartment.DepartmentList[0])
 
-	f = New("itemList")
-	itemList, err := FetchItemList(URL, f)
+	// f = New("itemList")
+	// itemList, err := FetchItemList(URL, f)
+	// if err != nil {
+	// 	log.Fatalf("%+v\n", err)
+	// }
+	// fmt.Println(itemList.Item[0].Name)
+
+}
+
+type testArticle struct{}
+
+func (d *testArticle) FetchItem(url string) (interface{}, error) {
+	data, err := ioutil.ReadFile("./../../test/article.json")
 	if err != nil {
-		log.Fatalf("%+v\n", err)
+		return nil, xerrors.New(err.Error())
 	}
-	fmt.Println(itemList.Item[0].Name)
+	item := &Article{}
+
+	if err := json.Unmarshal(data, item); err != nil {
+		err := xerrors.New("JSON Unmarshal error:")
+		return nil, xerrors.New(err.Error())
+	}
+	return item, nil
 }
 func TestFetchArticle(t *testing.T) {
-	URL := baseURL()
-	f := New("article")
-	article, err := FetchArticle(URL, f)
+	f := &testArticle{}
+
+	article, err := FetchArticle("", f)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -61,10 +89,27 @@ func TestFetchArticle(t *testing.T) {
 		t.Fatal("id error")
 	}
 }
+
+type testDepartment struct{}
+
+func (d *testDepartment) FetchItem(url string) (interface{}, error) {
+	data, err := ioutil.ReadFile("./../../test/department.json")
+	if err != nil {
+		return nil, xerrors.New(err.Error())
+	}
+	item := &Department{}
+
+	if err := json.Unmarshal(data, item); err != nil {
+		err := xerrors.New("JSON Unmarshal error:")
+		return nil, xerrors.New(err.Error())
+	}
+	return item, nil
+}
 func TestFetchDepartment(t *testing.T) {
-	URL := baseURL()
-	f := New("department")
-	department, err := FetchDepartment(URL, f)
+	// URL := baseURL()
+	// f := New("department")
+	f := &testDepartment{}
+	department, err := FetchDepartment("", f)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -73,10 +118,26 @@ func TestFetchDepartment(t *testing.T) {
 	}
 }
 
+type testAvailableDepartment struct{}
+
+func (d *testAvailableDepartment) FetchItem(url string) (interface{}, error) {
+	data, err := ioutil.ReadFile("./../../test/availableDepartment.json")
+	if err != nil {
+		return nil, xerrors.New(err.Error())
+	}
+	item := &AvailableDepartment{}
+
+	if err := json.Unmarshal(data, item); err != nil {
+		err := xerrors.New("JSON Unmarshal error:")
+		return nil, xerrors.New(err.Error())
+	}
+	return item, nil
+}
 func TestFetchAvailableDepartment(t *testing.T) {
-	URL := baseURL()
-	f := New("availableDepartment")
-	availableDepartment, err := FetchAvailableDepartment(URL, f)
+	// URL := baseURL()
+	// f := New("availableDepartment")
+	f := &testAvailableDepartment{}
+	availableDepartment, err := FetchAvailableDepartment("", f)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -86,10 +147,26 @@ func TestFetchAvailableDepartment(t *testing.T) {
 	}
 }
 
+type testItemList struct{}
+
+func (d *testItemList) FetchItem(url string) (interface{}, error) {
+	data, err := ioutil.ReadFile("./../../test/itemList.json")
+	if err != nil {
+		return nil, xerrors.New(err.Error())
+	}
+	item := &ItemList{}
+
+	if err := json.Unmarshal(data, item); err != nil {
+		err := xerrors.New("JSON Unmarshal error:")
+		return nil, xerrors.New(err.Error())
+	}
+	return item, nil
+}
 func TestFetchItemList(t *testing.T) {
-	URL := baseURL()
-	f := New("itemList")
-	itemList, err := FetchItemList(URL, f)
+	// URL := baseURL()
+	// f := New("itemList")
+	f := &testItemList{}
+	itemList, err := FetchItemList("", f)
 	if err != nil {
 		t.Fatal(err)
 	}
