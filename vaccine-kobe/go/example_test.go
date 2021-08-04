@@ -22,7 +22,7 @@ func writeFile(filename string, obj interface{}) error {
 	if err != nil {
 		return xerrors.New(err.Error())
 	}
-	if err := ioutil.WriteFile("./../../test/"+filename, buf, 0666); err != nil {
+	if err := os.WriteFile("./../../test/"+filename, buf, 0644); err != nil {
 		return xerrors.New(err.Error())
 	}
 	return nil
@@ -38,9 +38,17 @@ func TestMain(t *testing.T) {
 	// if err != nil {
 	// 	log.Fatalf("%+v\n", err)
 	// }
+
+	// if err := writeFile("article.json", article); err != nil {
+	// 	t.Fatalf("%+v\n", err)
+	// }
+
 	// fmt.Println(article.Articles[0].ID)
 
 	// f = New("department")
+	// if f == nil {
+	// 	t.Fatalf("%+v\n", f)
+	// }
 	// department, err := FetchDepartment(URL, f)
 	// if err != nil {
 	// 	log.Fatalf("%+v\n", err)
@@ -48,6 +56,9 @@ func TestMain(t *testing.T) {
 	// fmt.Println("id", department.Department[0].ID)
 
 	// f = New("availableDepartment")
+	// if f == nil {
+	// 	t.Fatalf("%+v\n", f)
+	// }
 	// availableDepartment, err := FetchAvailableDepartment(URL, f)
 	// if err != nil {
 	// 	log.Fatalf("%+v\n", err)
@@ -55,12 +66,14 @@ func TestMain(t *testing.T) {
 	// fmt.Println(availableDepartment.DepartmentList[0])
 
 	// f = New("itemList")
+	// if f == nil {
+	// 	t.Fatalf("%+v\n", f)
+	// }
 	// itemList, err := FetchItemList(URL, f)
 	// if err != nil {
 	// 	log.Fatalf("%+v\n", err)
 	// }
 	// fmt.Println(itemList.Item[0].Name)
-
 }
 
 type testArticle struct{}
@@ -106,8 +119,6 @@ func (d *testDepartment) FetchItem(url string) (interface{}, error) {
 	return item, nil
 }
 func TestFetchDepartment(t *testing.T) {
-	// URL := baseURL()
-	// f := New("department")
 	f := &testDepartment{}
 	department, err := FetchDepartment("", f)
 	if err != nil {
@@ -134,8 +145,6 @@ func (d *testAvailableDepartment) FetchItem(url string) (interface{}, error) {
 	return item, nil
 }
 func TestFetchAvailableDepartment(t *testing.T) {
-	// URL := baseURL()
-	// f := New("availableDepartment")
 	f := &testAvailableDepartment{}
 	availableDepartment, err := FetchAvailableDepartment("", f)
 	if err != nil {
@@ -163,8 +172,6 @@ func (d *testItemList) FetchItem(url string) (interface{}, error) {
 	return item, nil
 }
 func TestFetchItemList(t *testing.T) {
-	// URL := baseURL()
-	// f := New("itemList")
 	f := &testItemList{}
 	itemList, err := FetchItemList("", f)
 	if err != nil {
