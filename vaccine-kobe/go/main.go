@@ -2,14 +2,10 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
-	"log"
 	"net/http"
-	"os"
 	"time"
 
-	"github.com/joho/godotenv"
 	"golang.org/x/xerrors"
 )
 
@@ -68,38 +64,12 @@ type ItemList struct {
 }
 
 func main() {
-	if err := godotenv.Load(); err != nil {
-		log.Fatal(err)
-	}
-	URL := os.Getenv("BASE")
-
-	f := New("article")
-	article, err := FetchArticle(URL, f)
-	if err != nil {
-		log.Fatalf("%+v\n", err)
-	}
-	fmt.Println(article.Articles[0].ID)
-
-	f = New("department")
-	department, err := FetchDepartment(URL, f)
-	if err != nil {
-		log.Fatalf("%+v\n", err)
-	}
-	fmt.Println(department.Department[0].Name)
-
-	f = New("availableDepartment")
-	availableDepartment, err := FetchAvailableDepartment(URL, f)
-	if err != nil {
-		log.Fatalf("%+v\n", err)
-	}
-	fmt.Println(availableDepartment.DepartmentList[0])
-
-	f = New("itemList")
-	itemList, err := FetchItemList(URL, f)
-	if err != nil {
-		log.Fatalf("%+v\n", err)
-	}
-	fmt.Println(itemList.Item[0].Name)
+	// if err := godotenv.Load(); err != nil {
+	// 	log.Fatal(err)
+	// }
+	// URL := os.Getenv("BASE")
+	// URL = URL + "available_date/?department_id=8769&item_id=3&year=2021&month=8"
+	// URL = URL + "/articles/"
 }
 
 // ----------------
@@ -131,7 +101,18 @@ func New(contentType string) Fetcher {
 }
 
 // --------------------
-
+func Fetch(url string) ([]byte, error) {
+	res, err := http.Get(url)
+	if err != nil {
+		return nil, xerrors.New(err.Error())
+	}
+	defer res.Body.Close()
+	data, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		return nil, xerrors.New(err.Error())
+	}
+	return data, nil
+}
 func FetchArticle(url string, f Fetcher) (*Article, error) {
 	url = url + "articles/"
 	obj, err := f.FetchItem(url)
@@ -145,20 +126,13 @@ func FetchArticle(url string, f Fetcher) (*Article, error) {
 	return article, nil
 }
 func (Article) FetchItem(url string) (interface{}, error) {
-	res, err := http.Get(url)
+	data, err := Fetch(url)
 	if err != nil {
 		return nil, xerrors.New(err.Error())
 	}
-	defer res.Body.Close()
-	robots, err := ioutil.ReadAll(res.Body)
-	if err != nil {
-		return nil, xerrors.New(err.Error())
-	}
-
 	item := &Article{}
 
-	if err := json.Unmarshal(robots, item); err != nil {
-		err := xerrors.New("JSON Unmarshal error:")
+	if err := json.Unmarshal(data, item); err != nil {
 		return nil, xerrors.New(err.Error())
 	}
 	return item, nil
@@ -178,20 +152,13 @@ func FetchDepartment(url string, f Fetcher) (*Department, error) {
 	return department, nil
 }
 func (Department) FetchItem(url string) (interface{}, error) {
-	res, err := http.Get(url)
+	data, err := Fetch(url)
 	if err != nil {
 		return nil, xerrors.New(err.Error())
 	}
-	defer res.Body.Close()
-	robots, err := ioutil.ReadAll(res.Body)
-	if err != nil {
-		return nil, xerrors.New(err.Error())
-	}
-
 	item := &Department{}
 
-	if err := json.Unmarshal(robots, item); err != nil {
-		err := xerrors.New("JSON Unmarshal error:")
+	if err := json.Unmarshal(data, item); err != nil {
 		return nil, xerrors.New(err.Error())
 	}
 	return item, nil
@@ -209,20 +176,14 @@ func FetchAvailableDepartment(url string, f Fetcher) (*AvailableDepartment, erro
 	return availableDepartment, nil
 }
 func (AvailableDepartment) FetchItem(url string) (interface{}, error) {
-	res, err := http.Get(url)
-	if err != nil {
-		return nil, xerrors.New(err.Error())
-	}
-	defer res.Body.Close()
-	robots, err := ioutil.ReadAll(res.Body)
+	data, err := Fetch(url)
 	if err != nil {
 		return nil, xerrors.New(err.Error())
 	}
 
 	item := &AvailableDepartment{}
 
-	if err := json.Unmarshal(robots, item); err != nil {
-		err := xerrors.New("JSON Unmarshal error:")
+	if err := json.Unmarshal(data, item); err != nil {
 		return nil, xerrors.New(err.Error())
 	}
 	return item, nil
@@ -240,20 +201,14 @@ func FetchItemList(url string, f Fetcher) (*ItemList, error) {
 	return itemList, nil
 }
 func (ItemList) FetchItem(url string) (interface{}, error) {
-	res, err := http.Get(url)
-	if err != nil {
-		return nil, xerrors.New(err.Error())
-	}
-	defer res.Body.Close()
-	robots, err := ioutil.ReadAll(res.Body)
+	data, err := Fetch(url)
 	if err != nil {
 		return nil, xerrors.New(err.Error())
 	}
 
 	item := &ItemList{}
 
-	if err := json.Unmarshal(robots, item); err != nil {
-		err := xerrors.New("JSON Unmarshal error:")
+	if err := json.Unmarshal(data, item); err != nil {
 		return nil, xerrors.New(err.Error())
 	}
 	return item, nil
