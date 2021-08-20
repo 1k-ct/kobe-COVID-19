@@ -3,8 +3,8 @@ import csv
 import requests
 import io
 import os
-from os.path import join, dirname
-from dotenv import load_dotenv
+# from os.path import join, dirname
+# from dotenv import load_dotenv
 
 
 def parse_CSV_to_JSON(CSV_URL: str) -> dict:
@@ -26,36 +26,18 @@ def load_JSON(json_data: dict, json_file: str):
         json.dump(json_data, f, ensure_ascii=False, indent=4)
 
 
-def script_load_positive_cases():
-    CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kansensya.csv"
-    json_data = parse_CSV_to_JSON(CSV_URL)
-    json_file = "data/kansensya.json"
-    load_JSON(json_data, json_file)
+def load_script(csv_url: str, file_name: str) -> None:
+    json_data = parse_CSV_to_JSON(csv_url)
+    load_JSON(json_data, file_name)
     return
 
 
-def script_load_positivity_rate_in_testing():
-    CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kensa.csv"
-    json_data = parse_CSV_to_JSON(CSV_URL)
-    json_file = "data/kensa.json"
-    load_JSON(json_data, json_file)
-    return
+# def setting():
+#     load_dotenv(verbose=True)
 
-
-def script_load_details_of_test_positives():
-    CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kansensyazokusei.csv"
-    json_data = parse_CSV_to_JSON(CSV_URL)
-    json_file = "data/kansensyazokusei.json"
-    load_JSON(json_data, json_file)
-    return
-
-
-def setting():
-    load_dotenv(verbose=True)
-
-    dotenv_path = join(dirname(__file__), ".env")
-    load_dotenv(dotenv_path)
-    return os.environ.get("URL")
+#     dotenv_path = join(dirname(__file__), ".env")
+#     load_dotenv(dotenv_path)
+#     return os.environ.get("URL")
 
 
 def fetch_load_json(URL: str, file_path: str):
@@ -68,20 +50,30 @@ def fetch_load_json(URL: str, file_path: str):
 
 
 def main():
-    script_load_details_of_test_positives()
-    script_load_positive_cases()
-    script_load_positivity_rate_in_testing()
 
-    BASE_URL = setting()
-    URL = f"{BASE_URL}/available_date/?department_id=8769&item_id=3&year=2021&month=8"
-    fetch_load_json(URL, "data/month-8-all.json")
+    CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kansensya.csv"
+    file_name = "data/kansensya.json"
+    load_script(csv_url=CSV_URL, file_name=file_name)
 
-    BASE_URL = setting()
-    # start_date_after = "07-15"
-    start_date_after = "08-01"
-    start_date_before = "08-02"
-    URL = f"{BASE_URL}/reservation_frame/?department_id=8769&item_id=3&start_date_after=2021-{start_date_after}&start_date_before=2021-{start_date_before}"
-    fetch_load_json(URL, "data/date-details.json")
+    CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kansensyazokusei.csv"
+    file_name = "data/kensa.json"
+    load_script(csv_url=CSV_URL, file_name=file_name)
+
+    CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kansensyazokusei.csv"
+    file_name = "data/kansensyazokusei.json"
+    load_script(csv_url=CSV_URL, file_name=file_name)
+
+    # BASE_URL = setting()
+    # URL = f"{BASE_URL}/available_date/?department_id=8769&item_id=3&year=2021&month=8"
+    # fetch_load_json(URL, "data/month-8-all.json")
+
+    # BASE_URL = setting()
+    # # start_date_after = "07-15"
+    # start_date_after = "08-01"
+    # start_date_before = "08-02"
+    # URL = f"{BASE_URL}/reservation_frame/?department_id=8769&item_id=3&start_date_after=2021-{start_date_after}&start_date_before=2021-{start_date_before}"
+    # fetch_load_json(URL, "data/date-details.json")
+    print("ok")
 
 
 if __name__ == "__main__":
