@@ -42,8 +42,8 @@ jobs:
           git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
           git config --global user.email "***@***.com"
           git config --global user.name "github workflow"
-          git checkout data
+          # git checkout data
           git add .
           git commit -m "auto-data"
           # git pull
-          git push origin data
+          git push origin main
