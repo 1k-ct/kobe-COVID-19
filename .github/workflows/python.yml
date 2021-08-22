@@ -2,15 +2,11 @@ name: python-test
 
 on:
   schedule:
-    # - cron: "0 3 * * *"
-    - cron: "*/5 * * * *"
+    - cron: "0 3 * * *"
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    # strategy:
-    #   matrix:
-    #     python-version: [3.8]
 
     steps:
       - uses: actions/checkout@v2
@@ -30,8 +26,6 @@ jobs:
           git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
           git config --global user.email "***@***.com"
           git config --global user.name "github workflow"
-          git checkout data
           git add .
           git commit -m "auto-data"
-          # git pull
-          git push origin data
+          git push origin main
