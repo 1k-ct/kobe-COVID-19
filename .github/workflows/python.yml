@@ -33,5 +33,5 @@ jobs:
           git checkout data
           git add .
           git commit -m "auto-data"
-          git pull
+          # git pull
           git push origin data
