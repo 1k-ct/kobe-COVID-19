@@ -22,10 +22,15 @@ jobs:
         run: |
           python test_main.py
       - name: commit and push to data
+        env:
+          TZ: "Asia/Tokyo"
         run: |
           git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
           git config --global user.email "***@***.com"
           git config --global user.name "github workflow"
+          # git checkout data
           git add .
-          git commit -m "auto-data"
+          DATE=`date +"%Y%m%dT%H:%M:%S"`
+          git commit -m "$DATE"
+          # git pull
           git push origin main
