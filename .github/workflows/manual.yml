@@ -47,6 +47,6 @@ jobs:
           git config --global user.name "github workflow"
           # git checkout data
           git add .
-          git commit -m "$DATE"
+          git commit -m "data_$DATE"
           # git pull
           git push origin main
