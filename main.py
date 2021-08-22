@@ -55,7 +55,7 @@ def main():
     file_name = "data/kansensya.json"
     load_script(csv_url=CSV_URL, file_name=file_name)
 
-    CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kansensyazokusei.csv"
+    CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kensa.csv"
     file_name = "data/kensa.json"
     load_script(csv_url=CSV_URL, file_name=file_name)
 
