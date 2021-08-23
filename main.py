@@ -63,6 +63,9 @@ def main():
     file_name = "data/kansensyazokusei.json"
     load_script(csv_url=CSV_URL, file_name=file_name)
 
+    CSV_URL = "https://www.city.kobe.lg.jp/documents/36421/kansensyazokusei.csv"
+    file_name = "data/36421-kansensyazokusei.json"
+    load_script(csv_url=CSV_URL, file_name=file_name)
     # BASE_URL = setting()
     # URL = f"{BASE_URL}/available_date/?department_id=8769&item_id=3&year=2021&month=8"
     # fetch_load_json(URL, "data/month-8-all.json")
