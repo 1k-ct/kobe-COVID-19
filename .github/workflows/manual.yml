@@ -33,9 +33,9 @@ jobs:
           pip install requests
         env:
           url: ${{secrets.VAC_URL}}
-      - name: Run test_main.py $url
+      - name: Run test_main.py
         run: |
-          python test_main.py ${{secrets.VAC_URL}}
+          python test_main.py $url
       - name: commit and push to data
         env:
           TZ: "Asia/Tokyo"
