@@ -1,5 +1,6 @@
 import main
-import sys
+# import sys
+import os
 
 
 CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kansensya.csv"
@@ -18,8 +19,9 @@ CSV_URL = "https://www.city.kobe.lg.jp/documents/36421/kansensyazokusei.csv"
 file_name = "data/36421-kansensyazokusei.json"
 main.load_script(csv_url=CSV_URL, file_name=file_name)
 
-args = sys.argv
-base_url = args[1]
+# args = sys.argv
+# base_url = args[1]
+base_url = os.environ.get("BASE_URL")
 
 urls = [
     base_url + "articles/",
