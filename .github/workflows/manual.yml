@@ -31,6 +31,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install requests
+          pip install json
       - name: Run test_main.py
         run: |
           python test_main.py
