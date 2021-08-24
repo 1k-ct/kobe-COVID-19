@@ -33,7 +33,7 @@ jobs:
           pip install requests
       - name: Run test_main.py
         env:
-          BASE_URL: ${{secrets.VAC_URL}}
+          BASE_URL: ${{ secrets.VAC_URL }}
         run: |
           python test_main.py
       - name: commit and push to data
