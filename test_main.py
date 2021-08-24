@@ -21,7 +21,7 @@ main.load_script(csv_url=CSV_URL, file_name=file_name)
 
 # args = sys.argv
 # base_url = args[1]
-base_url = os.environ.get("BASE_URL")
+base_url = "https://api-cache.vaccines.sciseed.jp/public/281000/"
 
 urls = [
     base_url + "articles/",

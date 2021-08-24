@@ -44,32 +44,53 @@ def fetch_load_json(URL: str, file_path: str):
     r = requests.get(URL)
 
     data = r.json()
-
     with open(file_path, 'w', encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
 
 def main():
 
-    CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kansensya.csv"
-    file_name = "data/kansensya.json"
-    load_script(csv_url=CSV_URL, file_name=file_name)
+    # CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kansensya.csv"
+    # file_name = "data/kansensya.json"
+    # load_script(csv_url=CSV_URL, file_name=file_name)
 
-    CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kensa.csv"
-    file_name = "data/kensa.json"
-    load_script(csv_url=CSV_URL, file_name=file_name)
+    # CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kensa.csv"
+    # file_name = "data/kensa.json"
+    # load_script(csv_url=CSV_URL, file_name=file_name)
 
-    CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kansensyazokusei.csv"
-    file_name = "data/kansensyazokusei.json"
-    load_script(csv_url=CSV_URL, file_name=file_name)
+    # CSV_URL = "https://www.city.kobe.lg.jp/documents/32576/kansensyazokusei.csv"
+    # file_name = "data/kansensyazokusei.json"
+    # load_script(csv_url=CSV_URL, file_name=file_name)
 
-    CSV_URL = "https://www.city.kobe.lg.jp/documents/36421/kansensyazokusei.csv"
-    file_name = "data/36421-kansensyazokusei.json"
-    load_script(csv_url=CSV_URL, file_name=file_name)
+    # CSV_URL = "https://www.city.kobe.lg.jp/documents/36421/kansensyazokusei.csv"
+    # file_name = "data/36421-kansensyazokusei.json"
+    # load_script(csv_url=CSV_URL, file_name=file_name)
+    url = "https://api-cache.vaccines.sciseed.jp/public/281000/articles/"
+    file_name = "data/article.json"
+    fetch_load_json(URL=url, file_path=file_name)
+
+    url = "https://api-cache.vaccines.sciseed.jp/public/281000/department/"
+    file_name = "data/department.json"
+    fetch_load_json(URL=url, file_path=file_name)
+
+    url = "https://api-cache.vaccines.sciseed.jp/public/281000/available_department/"
+    file_name = "data/available_department.json"
+    fetch_load_json(URL=url, file_path=file_name)
+
+    url = "https://api-cache.vaccines.sciseed.jp/public/281000/item/"
+    file_name = "data/item.json"
+    fetch_load_json(URL=url, file_path=file_name)
+
+    url = "https://api-cache.vaccines.sciseed.jp/public/281000/available_date/?department_id=8769&item_id=3&year=2021&month=8"
     # BASE_URL = setting()
     # URL = f"{BASE_URL}/available_date/?department_id=8769&item_id=3&year=2021&month=8"
     # fetch_load_json(URL, "data/month-8-all.json")
-
+    url = "https://api-cache.vaccines.sciseed.jp/public/281000/reservation_frame/?department_id=8769&item_id=3&start_date_after=2021-07-14&start_date_before=2022-10-10"
+    file_name = "data/reservation_frame1.json"
+    fetch_load_json(URL=url, file_path=file_name)
+    url = "https://api-cache.vaccines.sciseed.jp/public/281000/reservation_frame/?department_id=8770&item_id=3&start_date_after=2021-07-14&start_date_before=2022-10-10"
+    file_name = "data/reservation_frame2.json"
+    fetch_load_json(URL=url, file_path=file_name)
     # BASE_URL = setting()
     # # start_date_after = "07-15"
     # start_date_after = "08-01"
