@@ -35,6 +35,7 @@ jobs:
         env:
           url: ${{ secrets.VAC_URL }}
         run: |
+          echo $url
           python test_main.py $url
       - name: commit and push to data
         env:
