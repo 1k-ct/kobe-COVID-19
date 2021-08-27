@@ -1,0 +1,127 @@
+{
+    "2021-09-01": {
+        "total_cnt": 490,
+        "total_cnt_limit": 2920,
+        "available": true
+    },
+    "2021-09-02": {
+        "total_cnt": 482,
+        "total_cnt_limit": 1520,
+        "available": true
+    },
+    "2021-09-03": {
+        "total_cnt": 2688,
+        "total_cnt_limit": 2920,
+        "available": true
+    },
+    "2021-09-04": {
+        "total_cnt": 2920,
+        "total_cnt_limit": 2920,
+        "available": false
+    },
+    "2021-09-05": {
+        "total_cnt": 2501,
+        "total_cnt_limit": 2520,
+        "available": true
+    },
+    "2021-09-08": {
+        "total_cnt": 3642,
+        "total_cnt_limit": 3860,
+        "available": true
+    },
+    "2021-09-09": {
+        "total_cnt": 2165,
+        "total_cnt_limit": 2500,
+        "available": true
+    },
+    "2021-09-10": {
+        "total_cnt": 3860,
+        "total_cnt_limit": 3860,
+        "available": false
+    },
+    "2021-09-11": {
+        "total_cnt": 3910,
+        "total_cnt_limit": 3910,
+        "available": false
+    },
+    "2021-09-12": {
+        "total_cnt": 1999,
+        "total_cnt_limit": 2000,
+        "available": true
+    },
+    "2021-09-13": {
+        "total_cnt": 2588,
+        "total_cnt_limit": 4300,
+        "available": true
+    },
+    "2021-09-17": {
+        "total_cnt": 2500,
+        "total_cnt_limit": 2500,
+        "available": false
+    },
+    "2021-09-18": {
+        "total_cnt": 2000,
+        "total_cnt_limit": 2000,
+        "available": false
+    },
+    "2021-09-19": {
+        "total_cnt": 4273,
+        "total_cnt_limit": 4420,
+        "available": true
+    },
+    "2021-09-20": {
+        "total_cnt": 2364,
+        "total_cnt_limit": 3500,
+        "available": true
+    },
+    "2021-09-21": {
+        "total_cnt": 3346,
+        "total_cnt_limit": 3500,
+        "available": true
+    },
+    "2021-09-22": {
+        "total_cnt": 3385,
+        "total_cnt_limit": 3500,
+        "available": true
+    },
+    "2021-09-23": {
+        "total_cnt": 1745,
+        "total_cnt_limit": 1750,
+        "available": true
+    },
+    "2021-09-24": {
+        "total_cnt": 2966,
+        "total_cnt_limit": 3500,
+        "available": true
+    },
+    "2021-09-25": {
+        "total_cnt": 1333,
+        "total_cnt_limit": 2500,
+        "available": true
+    },
+    "2021-09-26": {
+        "total_cnt": 1773,
+        "total_cnt_limit": 2000,
+        "available": true
+    },
+    "2021-09-27": {
+        "total_cnt": 1495,
+        "total_cnt_limit": 3940,
+        "available": true
+    },
+    "2021-09-28": {
+        "total_cnt": 1303,
+        "total_cnt_limit": 3940,
+        "available": true
+    },
+    "2021-09-29": {
+        "total_cnt": 1284,
+        "total_cnt_limit": 3940,
+        "available": true
+    },
+    "2021-09-30": {
+        "total_cnt": 1339,
+        "total_cnt_limit": 1750,
+        "available": true
+    }
+}

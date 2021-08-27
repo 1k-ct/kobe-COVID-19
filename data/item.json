@@ -1,0 +1,34 @@
+{
+    "item": [
+        {
+            "id": 1,
+            "name": "ファイザー社ワクチン",
+            "interval": 1814400,
+            "information": {
+                "message": "2回目の予約は3週間後（3週間後の同じ曜日）以降で予約が可能です。※3週間後以降でも予約枠の空きがない場合は予約できません。",
+                "displayed_name_kana": "ファイザーシャ",
+                "vaccine_manufacturer": "ファイザー"
+            }
+        },
+        {
+            "id": 2,
+            "name": "アストラゼネカ社ワクチン",
+            "interval": 2419200,
+            "information": {
+                "message": "2回目の予約は4週間後（4週間後の同じ曜日）以降で予約が可能です。※4週間後以降でも予約枠の空きがない場合は予約できません。",
+                "displayed_name_kana": "アストラゼネカシャ",
+                "vaccine_manufacturer": "アストラゼネカ"
+            }
+        },
+        {
+            "id": 3,
+            "name": "モデルナ社ワクチン",
+            "interval": 2419200,
+            "information": {
+                "message": "2回目の予約は4週間後（4週間後の同じ曜日）以降で予約が可能です。※4週間後以降でも予約枠の空きがない場合は予約できません。",
+                "displayed_name_kana": "タケダ、モデルナシャ",
+                "vaccine_manufacturer": "武田／モデルナ"
+            }
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "2021-08-28": {
+        "total_cnt": 2000,
+        "total_cnt_limit": 2000,
+        "available": false
+    },
+    "2021-08-29": {
+        "total_cnt": 394,
+        "total_cnt_limit": 1520,
+        "available": true
+    },
+    "2021-08-30": {
+        "total_cnt": 921,
+        "total_cnt_limit": 2020,
+        "available": true
+    },
+    "2021-08-31": {
+        "total_cnt": 646,
+        "total_cnt_limit": 2520,
+        "available": true
+    }
+}

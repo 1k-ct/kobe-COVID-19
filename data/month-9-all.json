@@ -1,0 +1,112 @@
+{
+    "2021-09-01": {
+        "total_cnt": 2860,
+        "total_cnt_limit": 2860,
+        "available": false
+    },
+    "2021-09-02": {
+        "total_cnt": 1520,
+        "total_cnt_limit": 1520,
+        "available": false
+    },
+    "2021-09-03": {
+        "total_cnt": 2859,
+        "total_cnt_limit": 2860,
+        "available": true
+    },
+    "2021-09-04": {
+        "total_cnt": 2860,
+        "total_cnt_limit": 2860,
+        "available": false
+    },
+    "2021-09-05": {
+        "total_cnt": 2860,
+        "total_cnt_limit": 2860,
+        "available": false
+    },
+    "2021-09-08": {
+        "total_cnt": 2169,
+        "total_cnt_limit": 2940,
+        "available": true
+    },
+    "2021-09-09": {
+        "total_cnt": 975,
+        "total_cnt_limit": 1500,
+        "available": true
+    },
+    "2021-09-10": {
+        "total_cnt": 2086,
+        "total_cnt_limit": 2940,
+        "available": true
+    },
+    "2021-09-11": {
+        "total_cnt": 2868,
+        "total_cnt_limit": 2890,
+        "available": true
+    },
+    "2021-09-13": {
+        "total_cnt": 896,
+        "total_cnt_limit": 2500,
+        "available": true
+    },
+    "2021-09-17": {
+        "total_cnt": 777,
+        "total_cnt_limit": 1250,
+        "available": true
+    },
+    "2021-09-19": {
+        "total_cnt": 676,
+        "total_cnt_limit": 2420,
+        "available": true
+    },
+    "2021-09-20": {
+        "total_cnt": 230,
+        "total_cnt_limit": 3400,
+        "available": true
+    },
+    "2021-09-21": {
+        "total_cnt": 381,
+        "total_cnt_limit": 3400,
+        "available": true
+    },
+    "2021-09-22": {
+        "total_cnt": 309,
+        "total_cnt_limit": 3400,
+        "available": true
+    },
+    "2021-09-23": {
+        "total_cnt": 182,
+        "total_cnt_limit": 1750,
+        "available": true
+    },
+    "2021-09-24": {
+        "total_cnt": 333,
+        "total_cnt_limit": 3400,
+        "available": true
+    },
+    "2021-09-25": {
+        "total_cnt": 405,
+        "total_cnt_limit": 3480,
+        "available": true
+    },
+    "2021-09-27": {
+        "total_cnt": 243,
+        "total_cnt_limit": 2860,
+        "available": true
+    },
+    "2021-09-28": {
+        "total_cnt": 193,
+        "total_cnt_limit": 2860,
+        "available": true
+    },
+    "2021-09-29": {
+        "total_cnt": 184,
+        "total_cnt_limit": 2860,
+        "available": true
+    },
+    "2021-09-30": {
+        "total_cnt": 218,
+        "total_cnt_limit": 1750,
+        "available": true
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "2021-08-26": {
+        "total_cnt": 2500,
+        "total_cnt_limit": 2500,
+        "available": false
+    },
+    "2021-08-27": {
+        "total_cnt": 2500,
+        "total_cnt_limit": 2500,
+        "available": false
+    },
+    "2021-08-29": {
+        "total_cnt": 3480,
+        "total_cnt_limit": 3480,
+        "available": false
+    },
+    "2021-08-30": {
+        "total_cnt": 2980,
+        "total_cnt_limit": 2980,
+        "available": false
+    },
+    "2021-08-31": {
+        "total_cnt": 2980,
+        "total_cnt_limit": 2980,
+        "available": false
+    }
+}
