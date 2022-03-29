@@ -7,7 +7,7 @@
             "<!doctype html>": "<head>"
         },
         {
-            "<!doctype html>": "<meta charset=\"utf-8\">"
+            "<!doctype html>": "<meta charset=\"UTF-8\">"
         },
         {
             "<!doctype html>": "<title>逾樊虻蟶ゑｼ壹＃謖�螳壹�ｮ繝壹�ｼ繧ｸ縺ｯ隕九▽縺九ｊ縺ｾ縺帙ｓ縺ｧ縺励◆</title>"
@@ -25,37 +25,37 @@
             "<!doctype html>": "<meta name=\"format-detection\" content=\"telephone=no\">"
         },
         {
-            "<!doctype html>": "<link href=\"/shared/style/default.css\" rel=\"stylesheet\" type=\"text/css\" media=\"all\">"
+            "<!doctype html>": "<link href=\"/shared/site_rn2021/style/default.css\" rel=\"stylesheet\" type=\"text/css\" media=\"all\">"
         },
         {
-            "<!doctype html>": "<link href=\"/shared/style/layout.css\" rel=\"stylesheet\" type=\"text/css\" media=\"all\">"
+            "<!doctype html>": "<link href=\"/shared/site_rn2021/style/layout.css\" rel=\"stylesheet\" type=\"text/css\" media=\"all\">"
         },
         {
-            "<!doctype html>": "<link href=\"/shared/templates/free/style/edit.css\" rel=\"stylesheet\" type=\"text/css\" media=\"all\">"
+            "<!doctype html>": "<link href=\"/shared/templates/free_rn2021/style/edit.css\" rel=\"stylesheet\" type=\"text/css\" media=\"all\">"
         },
         {
-            "<!doctype html>": "<link href=\"/shared/style/smartphone.css\" rel=\"stylesheet\" media=\"only screen and (max-width : 768px)\" type=\"text/css\" class=\"mc_css\">"
+            "<!doctype html>": "<link href=\"/shared/site_rn2021/style/smartphone.css\" rel=\"stylesheet\" class=\"mc_css\">"
         },
         {
-            "<!doctype html>": "<link href=\"/shared/templates/free/style/edit_sp.css\" rel=\"stylesheet\" media=\"only screen and (max-width : 768px)\" type=\"text/css\" class=\"mc_css\">"
+            "<!doctype html>": "<link href=\"/shared/templates/free_rn2021/style/edit_sp.css\" rel=\"stylesheet\" class=\"mc_css\">"
         },
         {
-            "<!doctype html>": "<link href=\"/shared/images/favicon/favicon.ico\" rel=\"shortcut icon\" type=\"image/vnd.microsoft.icon\">"
+            "<!doctype html>": "<link href=\"/shared/site_rn2021/images/favicon/favicon.ico\" rel=\"shortcut icon\" type=\"image/vnd.microsoft.icon\">"
         },
         {
-            "<!doctype html>": "<link href=\"/shared/images/favicon/apple-touch-icon-precomposed.png\" rel=\"apple-touch-icon-precomposed\">"
+            "<!doctype html>": "<link href=\"/shared/site_rn2021/images/favicon/apple-touch-icon-precomposed.png\" rel=\"apple-touch-icon-precomposed\">"
         },
         {
-            "<!doctype html>": "<script type=\"text/javascript\" src=\"/shared/js/jquery.js\"></script>"
+            "<!doctype html>": "<script src=\"/shared/site_rn2021/js/jquery.js\"></script>"
         },
         {
-            "<!doctype html>": "<script type=\"text/javascript\" src=\"/shared/js/setting.js\"></script>"
+            "<!doctype html>": "<script src=\"/shared/site_rn2021/js/setting.js\"></script>"
         },
         {
-            "<!doctype html>": "<script type=\"text/javascript\" src=\"/shared/js/ga.js\"></script>"
+            "<!doctype html>": "<script src=\"/shared/js/ga.js\"></script>"
         },
         {
-            "<!doctype html>": "<script type=\"text/javascript\" src=\"/shared/system/js/furigana/ysruby.js\"></script>"
+            "<!doctype html>": "<script src=\"/shared/system/js/furigana/ysruby.js\"></script>"
         },
         {
             "<!doctype html>": "</head>"
@@ -64,397 +64,421 @@
             "<!doctype html>": "<body class=\"format_free no_javascript\">"
         },
         {
-            "<!doctype html>": "<script type=\"text/javascript\" src=\"/shared/js/init.js\"></script>"
+            "<!doctype html>": "<script src=\"/shared/site_rn2021/js/init.js\"></script>"
         },
         {
             "<!doctype html>": "<div id=\"tmp_wrapper\">"
         },
         {
-            "<!doctype html>": "\t<noscript>"
+            "<!doctype html>": "<noscript>"
         },
         {
-            "<!doctype html>": "\t<p>縺薙�ｮ繧ｵ繧､繝医〒縺ｯJavaScript繧剃ｽｿ逕ｨ縺励◆繧ｳ繝ｳ繝�繝ｳ繝�繝ｻ讖溯�ｽ繧呈署萓帙＠縺ｦ縺�縺ｾ縺吶�JavaScript繧呈怏蜉ｹ縺ｫ縺吶ｋ縺ｨ縺泌茜逕ｨ縺�縺溘□縺代∪縺吶�</p>"
+            "<!doctype html>": "<p>縺薙�ｮ繧ｵ繧､繝医〒縺ｯJavaScript繧剃ｽｿ逕ｨ縺励◆繧ｳ繝ｳ繝�繝ｳ繝�繝ｻ讖溯�ｽ繧呈署萓帙＠縺ｦ縺�縺ｾ縺吶�JavaScript繧呈怏蜉ｹ縺ｫ縺吶ｋ縺ｨ縺泌茜逕ｨ縺�縺溘□縺代∪縺吶�</p>"
         },
         {
-            "<!doctype html>": "\t</noscript>"
+            "<!doctype html>": "</noscript>"
         },
         {
-            "<!doctype html>": "\t<p><a href=\"#tmp_honbun\" class=\"skip\">譛ｬ譁�縺ｸ繧ｹ繧ｭ繝�繝励＠縺ｾ縺吶�</a></p>"
+            "<!doctype html>": "<p><a href=\"#tmp_honbun\" class=\"skip\">譛ｬ譁�縺ｸ繧ｹ繧ｭ繝�繝励＠縺ｾ縺吶�</a></p>"
         },
         {
-            "<!doctype html>": "\t<div id=\"tmp_hg\">"
+            "<!doctype html>": "<header id=\"tmp_header\">"
         },
         {
-            "<!doctype html>": "\t\t<div id=\"tmp_header\">"
+            "<!doctype html>": "<div class=\"container\">"
         },
         {
-            "<!doctype html>": "\t\t\t<div class=\"container\">"
+            "<!doctype html>": "<div id=\"tmp_hlogo\">"
         },
         {
-            "<!doctype html>": "\t\t\t\t<div id=\"tmp_wrap_hlogo\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<div id=\"tmp_hlogo\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t<p><a href=\"/index.html\"><span class=\"txt\">逾樊虻蟶�</span></a></p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<p class=\"pref_btn\"><a href=\"/index.html\">逾樊虻蟶ゅヨ繝�繝励∈</a></p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t<div id=\"tmp_means\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<div id=\"tmp_wrap_setting\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t<ul id=\"tmp_setting\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t<li class=\"setting_char\"><a id=\"furigana\" data-target=\"tmp_main\" data-contents=\"tmp_main\" href=\"javascript:void(0);\">縺ｵ繧翫′縺ｪ</a></li>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t<li class=\"setting_link\"><a href=\"/mojisize.html\">譁�蟄励し繧､繧ｺ繝ｻ濶ｲ蜷医＞螟画峩</a></li>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t</ul>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t<p class=\"medical_btn\"><a href=\"/a65055/bosai/kyukyuiryo/search.html\">莨第律繝ｻ螟憺俣縺ｮ謨第･蛹ｻ逋よｩ滄未</a></p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<div class=\"wrap_search_panel\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t<div class=\"search_panel\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t<form class=\"search_form\" name=\"search_form\" action=\"/search.html\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t\t<p class=\"search_ttl\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t\t\t<label for=\"tmp_query\"><span class=\"txt\">繧ｵ繧､繝亥��讀懃ｴ｢</span></label>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t\t</p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t\t<div class=\"search_cnt\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t\t\t<p class=\"input_query\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t\t\t\t<input type=\"text\" value=\"\" name=\"q\" size=\"31\" id=\"tmp_query\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t\t\t</p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t\t\t<p class=\"sch_btn\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t\t\t\t<input type=\"submit\" name=\"sa\" value=\"讀懃ｴ｢\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t\t\t</p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t\t\t<p class=\"search_hidden\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t\t\t\t<input type=\"hidden\" name=\"cx\" value=\"010876499709854004800:ka98nroztag\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t\t\t\t<input type=\"hidden\" name=\"ie\" value=\"UTF-8\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t\t\t\t<input type=\"hidden\" name=\"cof\" value=\"FORID:9\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t\t\t</p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t\t</form>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t<ul id=\"tmp_hnavi_s\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<li id=\"tmp_hnavi_lmenu\"><a href=\"javascript:void(0);\"><span class=\"symbol_nav\">&nbsp;</span><span class=\"nav_text\">Language</span></a></li>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<li id=\"tmp_hnavi_rmenu\"><a href=\"javascript:void(0);\"><span class=\"symbol_nav\">&nbsp;</span><span class=\"nav_text\">繝｡繝九Η繝ｼ</span></a></li>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t</ul>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t<div id=\"tmp_sma_menu\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<div class=\"wrap_sma_sch\" id=\"tmp_sma_lmenu\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t<p class=\"close_btn\"><a href=\"javascript:void(0);\"><span class=\"txt\">髢峨§繧�</span></a></p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<div class=\"wrap_sma_sch\" id=\"tmp_sma_rmenu\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t<div id=\"tmp_sma_setting\"></div>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t<p class=\"top_btn\"><a href=\"/index.html\"><span class=\"txt\">逾樊虻蟶ゅヨ繝�繝励∈</span></a></p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t\t<p class=\"close_btn\"><a href=\"javascript:void(0);\"><span class=\"txt\">髢峨§繧�</span></a></p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t<div class=\"gnavi\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t<div class=\"container\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t<ul>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<li class=\"glist1\"><a href=\"/kurashi/index.html\"><span class=\"txt\">縺上ｉ縺励�ｻ謇狗ｶ壹″</span></a></li>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<li class=\"glist2\"><a href=\"/kosodate/index.html\"><span class=\"txt\">蟄占ご縺ｦ繝ｻ謨呵ご</span></a></li>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<li class=\"glist3\"><a href=\"/kenko/index.html\"><span class=\"txt\">蛛･蠎ｷ繝ｻ蛹ｻ逋ゅ�ｻ遖冗･�</span></a></li>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<li class=\"glist4\"><a href=\"/bosai/index.html\"><span class=\"txt\">髦ｲ轣ｽ繝ｻ螳牙�ｨ</span></a></li>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<li class=\"glist5\"><a href=\"/kanko/index.html\"><span class=\"txt\">隕ｳ蜈峨�ｻ譁�蛹悶�ｻ逕｣讌ｭ</span></a></li>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<li class=\"glist6\"><a href=\"/business/index.html\"><span class=\"txt\">繝薙ず繝阪せ</span></a></li>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<li class=\"glist7\"><a href=\"/shise/index.html\"><span class=\"txt\">蟶よ帆諠�蝣ｱ</span></a></li>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<li class=\"glist8\"><a href=\"/a57337/homepage/toiawase.html\"><span class=\"txt\">縺雁撫縺�蜷医ｏ縺�</span></a></li>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t</ul>"
-        },
-        {
-            "<!doctype html>": "\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t</div>"
-        },
-        {
-            "<!doctype html>": "\t<div id=\"tmp_read_btn\" class=\"container\">"
-        },
-        {
-            "<!doctype html>": "\t\t<div id=\"tmp_readspeaker\" class=\"rs_preserve rs_skip rs_splitbutton rs_addtools rs_exp\"></div>"
-        },
-        {
-            "<!doctype html>": "\t</div>"
-        },
-        {
-            "<!doctype html>": "\t<div id=\"tmp_read_contents\">"
-        },
-        {
-            "<!doctype html>": "\t\t<div id=\"tmp_location\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t<div class=\"container\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t<div id=\"tmp_pankuzu\" class=\"rs_skip\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<p class=\"current_position\">迴ｾ蝨ｨ菴咲ｽｮ</p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<p> <a href=\"/index.html\">繝帙�ｼ繝</a> &gt; 縺疲欠螳壹�ｮ繝壹�ｼ繧ｸ縺ｯ隕九▽縺九ｊ縺ｾ縺帙ｓ縺ｧ縺励◆ </p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t<div class=\"page_title\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t<div class=\"container\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t<h1>縺疲欠螳壹�ｮ繝壹�ｼ繧ｸ縺ｯ隕九▽縺九ｊ縺ｾ縺帙ｓ縺ｧ縺励◆</h1>"
-        },
-        {
-            "<!doctype html>": "\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t<div id=\"tmp_main\" class=\"column_cnt\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t<div class=\"container\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t<p id=\"tmp_honbun\" class=\"skip rs_skip\">縺薙％縺九ｉ譛ｬ譁�縺ｧ縺吶�</p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t<div id=\"tmp_contents\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<p>逕ｳ縺苓ｨｳ縺ゅｊ縺ｾ縺帙ｓ縺後√＃謖�螳壹�ｮ繝壹�ｼ繧ｸ縺檎ｧｻ蜍輔∪縺溘�ｯ蜑企勁縺輔ｌ縺ｦ縺�繧句ｴ蜷医′縺ゅｊ縺ｾ縺吶�</p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<p>逶ｮ逧�縺ｮ繝壹�ｼ繧ｸ縺瑚ｦ九▽縺九ｉ縺ｪ縺�蝣ｴ蜷医�ｯ縲√ヨ繝�繝励�壹�ｼ繧ｸ縺九ｉ讀懃ｴ｢縺励※荳九＆縺�縲�</p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<p><a href=\"/index.html\">繝医ャ繝励�壹�ｼ繧ｸ縺ｸ謌ｻ繧�</a></p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<h2>繧ｵ繧､繝亥��讀懃ｴ｢縺ｫ縺､縺�縺ｦ</h2>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<p>逾樊虻蟶ゅ�帙�ｼ繝繝壹�ｼ繧ｸ縺ｯ2019蟷ｴ11譛�1譌･縺ｫ繝ｪ繝九Η繝ｼ繧｢繝ｫ縺励∪縺励◆縲�</p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<p>繝ｪ繝九Η繝ｼ繧｢繝ｫ蠕後√し繧､繝亥��讀懃ｴ｢繧剃ｽｿ縺�縺ｨ縲√Μ繝九Η繝ｼ繧｢繝ｫ蜑阪�ｮ繝壹�ｼ繧ｸ縺瑚｡ｨ遉ｺ縺輔ｌ豁｣蟶ｸ縺ｫ髢ｲ隕ｧ縺ｧ縺阪↑縺�縺薙→縺後≠繧翫∪縺吶�</p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<p>讀懃ｴ｢繧ｵ繧､繝亥�ｴ縺ｧ譁ｰ縺励＞繝帙�ｼ繝繝壹�ｼ繧ｸ繧定ｪ崎ｭ倥☆繧九◆繧√↓譎る俣縺後°縺九ｋ縺薙→縺九ｉ縲√し繧､繝亥��讀懃ｴ｢縺ｮ邨先棡縺ｮ豁｣蟶ｸ縺ｪ蜿肴丐縺ｫ縺ｯ謨ｰ譌･縺九°繧玖ｦ玖ｾｼ縺ｿ縺ｧ縺吶�</p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<p>縺泌茜逕ｨ荳ｭ縺ｮ逧�讒倥↓縺ｯ縺比ｸ堺ｾｿ繧偵♀謗帙￠縺礼筏縺苓ｨｳ縺斐＊縺�縺ｾ縺帙ｓ縺後√＃逅�隗｣繧定ｳ懊ｊ縺ｾ縺吶ｈ縺�縺企｡倥＞縺�縺溘＠縺ｾ縺吶�</p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t</div>"
-        },
-        {
-            "<!doctype html>": "\t<div class=\"pnavi\">"
-        },
-        {
-            "<!doctype html>": "\t\t<div class=\"container\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t<p class=\"ptop\"><a class=\"pagetop\" href=\"#tmp_header\">繝壹�ｼ繧ｸ縺ｮ荳企Κ縺ｸ</a></p>"
-        },
-        {
-            "<!doctype html>": "\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t</div>"
-        },
-        {
-            "<!doctype html>": "\t<div id=\"tmp_footer\">"
-        },
-        {
-            "<!doctype html>": "\t\t<div class=\"container\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t<div class=\"wrap_fnavi\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t<ul class=\"fnavi\">"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<li><a href=\"/sitemap.html\">繧ｵ繧､繝医�槭ャ繝�</a></li>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<li><a href=\"/homepage/index.html\">逾樊虻蟶ゅ�帙�ｼ繝繝壹�ｼ繧ｸ縺ｮ縺泌茜逕ｨ譯亥��</a></li>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<li><a href=\"/a57337/homepage/p_policy.html\">繝励Λ繧､繝舌す繝ｼ繝昴Μ繧ｷ繝ｼ</a></li>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t\t<li><a href=\"/a28956/shise/about/building/index.html\">逾樊虻蟶ょｽｹ謇譛ｬ蠎∬�弱�ｮ縺疲｡亥��</a></li>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t</ul>"
-        },
-        {
-            "<!doctype html>": "\t\t\t\t<p class=\"copyright\" lang=\"en\">Copyright &copy; City of Kobe. All rights reserved.</p>"
-        },
-        {
-            "<!doctype html>": "\t\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t\t</div>"
-        },
-        {
-            "<!doctype html>": "\t</div>"
+            "<!doctype html>": "<p><a href=\"/index.html\"><span>逾樊虻蟶�</span></a></p>"
         },
         {
             "<!doctype html>": "</div>"
         },
         {
-            "<!doctype html>": "<script type=\"text/javascript\" src=\"/shared/js/function.js\"></script> "
+            "<!doctype html>": "<div id=\"tmp_function\">"
         },
         {
-            "<!doctype html>": "<script type=\"text/javascript\" src=\"/shared/js/main.js\"></script>"
+            "<!doctype html>": "<div class=\"wrap_search_panel\">"
+        },
+        {
+            "<!doctype html>": "<div class=\"search_panel\">"
+        },
+        {
+            "<!doctype html>": "<form action=\"/search.html\" name=\"search_form\" class=\"search_form\">"
+        },
+        {
+            "<!doctype html>": "<p class=\"search_ttl\"><label for=\"tmp_query\"><span class=\"txt\">繧ｵ繧､繝亥��讀懃ｴ｢</span></label></p>"
+        },
+        {
+            "<!doctype html>": "<div class=\"search_cnt\">"
+        },
+        {
+            "<!doctype html>": "<p class=\"input_query\"><input id=\"tmp_query\" name=\"q\" size=\"31\" type=\"text\" value=\"\" /></p>"
+        },
+        {
+            "<!doctype html>": "<p class=\"sch_btn\"><input name=\"sa\" type=\"submit\" value=\"讀懃ｴ｢\" /></p>"
+        },
+        {
+            "<!doctype html>": "<p class=\"search_hidden\"><input name=\"cx\" type=\"hidden\" value=\"010876499709854004800:ka98nroztag\" /> <input name=\"ie\" type=\"hidden\" value=\"UTF-8\" /> <input name=\"cof\" type=\"hidden\" value=\"FORID:9\" /></p>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</form>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "<ul id=\"tmp_hnavi_s\">"
+        },
+        {
+            "<!doctype html>": "\t<li id=\"tmp_hnavi_lmenu\"><a href=\"javascript:void(0);\"><span>Search Menu</span></a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li id=\"tmp_hnavi_rmenu\"><a href=\"javascript:void(0);\"><span>Menu</span></a></li>"
+        },
+        {
+            "<!doctype html>": "</ul>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</header>"
+        },
+        {
+            "<!doctype html>": "<div id=\"tmp_sma_menu\">"
+        },
+        {
+            "<!doctype html>": "<div id=\"tmp_sma_lmenu\" class=\"wrap_sma_sch\">"
+        },
+        {
+            "<!doctype html>": "<p class=\"close_btn\"><a href=\"javascript:void(0);\"><span>髢峨§繧�</span></a></p>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "<div id=\"tmp_sma_rmenu\" class=\"wrap_sma_sch\">"
+        },
+        {
+            "<!doctype html>": "<div class=\"container\">"
+        },
+        {
+            "<!doctype html>": "<div class=\"gnavi\">"
+        },
+        {
+            "<!doctype html>": "<ul>"
+        },
+        {
+            "<!doctype html>": "\t<li class=\"glist1\"><a href=\"/kurashi/index.html\">縺上ｉ縺励�ｻ謇狗ｶ壹″</a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li class=\"glist2\"><a href=\"/kosodate/index.html\">蟄占ご縺ｦ繝ｻ謨呵ご</a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li class=\"glist3\"><a href=\"/kenko/index.html\">蛛･蠎ｷ繝ｻ蛹ｻ逋ゅ�ｻ遖冗･�</a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li class=\"glist4\"><a href=\"/bosai/index.html\">髦ｲ轣ｽ繝ｻ螳牙�ｨ</a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li class=\"glist5\"><a href=\"/kanko/index.html\">隕ｳ蜈峨�ｻ譁�蛹悶�ｻ逕｣讌ｭ</a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li class=\"glist6\"><a href=\"/business/index.html\">繝薙ず繝阪せ</a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li class=\"glist7\"><a href=\"/shise/index.html\">蟶よ帆諠�蝣ｱ</a></li>"
+        },
+        {
+            "<!doctype html>": "</ul>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "<ul id=\"tmp_setting\">"
+        },
+        {
+            "<!doctype html>": "\t<li class=\"setting_char\"><a data-contents=\"tmp_main\" data-target=\"tmp_main\" href=\"javascript:void(0);\" id=\"furigana\">縺ｵ繧翫′縺ｪ陦ｨ遉ｺ</a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li class=\"setting_link\"><a href=\"/mojisize.html\">譁�蟄励し繧､繧ｺ繝ｻ濶ｲ蜷医＞螟画峩</a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li class=\"setting_lang\"><a href=\"/foreignlanguage/index.html\">Global site</a></li>"
+        },
+        {
+            "<!doctype html>": "</ul>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "<p class=\"close_btn\"><a href=\"javascript:void(0);\"><span>髢峨§繧�</span></a></p>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "<div id=\"tmp_wrap_main\" class=\"column_cnt\">"
+        },
+        {
+            "<!doctype html>": "<div id=\"tmp_read_contents\">"
+        },
+        {
+            "<!doctype html>": "<div id=\"tmp_location\">"
+        },
+        {
+            "<!doctype html>": "<div class=\"container\">"
+        },
+        {
+            "<!doctype html>": "<div id=\"tmp_pankuzu\" class=\"rs_skip\">"
+        },
+        {
+            "<!doctype html>": "<p> <a href=\"/index.html\">繝帙�ｼ繝</a> &gt; 縺疲欠螳壹�ｮ繝壹�ｼ繧ｸ縺ｯ隕九▽縺九ｊ縺ｾ縺帙ｓ縺ｧ縺励◆ </p>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "<div class=\"page_title\">"
+        },
+        {
+            "<!doctype html>": "<div class=\"container\">"
+        },
+        {
+            "<!doctype html>": "<h1>縺疲欠螳壹�ｮ繝壹�ｼ繧ｸ縺ｯ隕九▽縺九ｊ縺ｾ縺帙ｓ縺ｧ縺励◆</h1>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "<div id=\"tmp_main\">"
+        },
+        {
+            "<!doctype html>": "<div class=\"container\">"
+        },
+        {
+            "<!doctype html>": "<div class=\"col_main\">"
+        },
+        {
+            "<!doctype html>": "<p id=\"tmp_honbun\" class=\"skip rs_skip\">縺薙％縺九ｉ譛ｬ譁�縺ｧ縺吶�</p>"
+        },
+        {
+            "<!doctype html>": "<div id=\"tmp_readspeaker\" class=\"rs_preserve rs_skip rs_splitbutton rs_addtools rs_exp\"></div>"
+        },
+        {
+            "<!doctype html>": "<div id=\"tmp_contents\">"
+        },
+        {
+            "<!doctype html>": "<p>逕ｳ縺苓ｨｳ縺ゅｊ縺ｾ縺帙ｓ縺後√＃謖�螳壹�ｮ繝壹�ｼ繧ｸ縺檎ｧｻ蜍輔∪縺溘�ｯ蜑企勁縺輔ｌ縺ｦ縺�繧句ｴ蜷医′縺ゅｊ縺ｾ縺吶�</p>"
+        },
+        {
+            "<!doctype html>": "<p>逶ｮ逧�縺ｮ繝壹�ｼ繧ｸ縺瑚ｦ九▽縺九ｉ縺ｪ縺�蝣ｴ蜷医�ｯ縲√ヨ繝�繝励�壹�ｼ繧ｸ縺九ｉ讀懃ｴ｢縺励※荳九＆縺�縲�</p>"
+        },
+        {
+            "<!doctype html>": "<p><a href=\"/index.html\">繝医ャ繝励�壹�ｼ繧ｸ縺ｸ謌ｻ繧�</a></p>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "<footer id=\"tmp_footer\">"
+        },
+        {
+            "<!doctype html>": "<div class=\"container\">"
+        },
+        {
+            "<!doctype html>": "<div class=\"pnavi\">"
+        },
+        {
+            "<!doctype html>": "<p class=\"ptop\"><a href=\"#tmp_header\">繝壹�ｼ繧ｸ縺ｮ蜈磯ｭ縺ｸ謌ｻ繧�</a></p>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "<div class=\"footer_cnt\">"
+        },
+        {
+            "<!doctype html>": "<div class=\"footer_col_lft\">"
+        },
+        {
+            "<!doctype html>": "<div class=\"footer_logo\">"
+        },
+        {
+            "<!doctype html>": "<p><span>逾樊虻蟶ょｽｹ謇</span></p>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "<div class=\"footer_info\">"
+        },
+        {
+            "<!doctype html>": "<address>"
+        },
+        {
+            "<!doctype html>": "<p><span class=\"dis_code\">縲�650-8570</span>逾樊虻蟶ゆｸｭ螟ｮ蛹ｺ蜉邏咲伴6-5-1</p>"
+        },
+        {
+            "<!doctype html>": "<p><span>髮ｻ隧ｱ逡ｪ蜿ｷ�ｼ�</span>078-331-8181�ｼ井ｻ｣陦ｨ�ｼ�</p>"
+        },
+        {
+            "<!doctype html>": "</address>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "<div class=\"footer_col_rgt\">"
+        },
+        {
+            "<!doctype html>": "<div class=\"footer_sns\">"
+        },
+        {
+            "<!doctype html>": "<ul>"
+        },
+        {
+            "<!doctype html>": "\t<li class=\"sns_twitter\"><a href=\"https://twitter.com/kobekoho?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor\"><img alt=\"Twitter\" height=\"72\" src=\"/shared/site_rn2021/images/footer/social_twitter.png\" width=\"72\" /></a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li class=\"sns_facebook\"><a href=\"https://www.facebook.com/kobekoho\"><img alt=\"Facebook\" height=\"72\" src=\"/shared/site_rn2021/images/footer/social_facebook.png\" width=\"72\" /></a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li class=\"sns_instagram\"><a href=\"https://www.instagram.com/my.sweet.kobe/?hl=ja\"><img alt=\"Instagram\" height=\"72\" src=\"/shared/site_rn2021/images/footer/social_instagram.png\" width=\"72\" /></a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li class=\"sns_line\"><a href=\"https://lin.ee/3TT6shh\"><img alt=\"Line\" height=\"72\" src=\"/shared/site_rn2021/images/footer/social_line.png\" width=\"72\" /></a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li class=\"sns_youtube\"><a href=\"https://www.youtube.com/channel/UCI-keVKj9JGcSG0Ib3TE6OA\"><img alt=\"Youtube\" height=\"58\" src=\"/shared/site_rn2021/images/footer/social_youtube.png\" width=\"83\" /></a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li class=\"sns_magazine\"><a href=\"/a57337/shise/koho/kouhoushi/index.html\"><img alt=\"蠎�蝣ｱ邏僵OBE\" height=\"48\" src=\"/shared/site_rn2021/images/footer/social_magazine.png\" width=\"47\" /></a></li>"
+        },
+        {
+            "<!doctype html>": "</ul>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "<ul class=\"fnavi\">"
+        },
+        {
+            "<!doctype html>": "\t<li><a href=\"/a28956/shise/about/building/index.html\">蟶ょｽｹ謇縺ｸ縺ｮ繧｢繧ｯ繧ｻ繧ｹ</a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li><a href=\"https://help.city.kobe.lg.jp\" rel=\"external\">繧医￥縺ゅｋ雉ｪ蝠上→蝗樒ｭ�</a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li><a href=\"/a57337/homepage/toiawase.html\">縺雁撫縺�蜷医ｏ縺�</a></li>"
+        },
+        {
+            "<!doctype html>": "</ul>"
+        },
+        {
+            "<!doctype html>": "<div class=\"directional_button\">"
+        },
+        {
+            "<!doctype html>": "<ul>"
+        },
+        {
+            "<!doctype html>": "\t<li><a href=\"/sitemap.html\">繧ｵ繧､繝医�槭ャ繝�</a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li><a href=\"/homepage/index.html\">繝帙�ｼ繝繝壹�ｼ繧ｸ縺ｮ縺泌茜逕ｨ譯亥��</a></li>"
+        },
+        {
+            "<!doctype html>": "\t<li><a href=\"/a57337/homepage/p_policy.html\">繝励Λ繧､繝舌す繝ｼ繝昴Μ繧ｷ繝ｼ</a></li>"
+        },
+        {
+            "<!doctype html>": "</ul>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "<div class=\"city_info\">"
+        },
+        {
+            "<!doctype html>": "<div class=\"container\">"
+        },
+        {
+            "<!doctype html>": "<p lang=\"en\" class=\"copyright\">Copyright &copy; City of Kobe. All rights reserved.</p>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "</footer>"
+        },
+        {
+            "<!doctype html>": "</div>"
+        },
+        {
+            "<!doctype html>": "<script src=\"/shared/site_rn2021/js/slick_min.js\"></script>"
+        },
+        {
+            "<!doctype html>": "<script src=\"/shared/site_rn2021/js/function.js\"></script>"
+        },
+        {
+            "<!doctype html>": "<script src=\"/shared/site_rn2021/js/main.js\"></script>"
         },
         {
             "<!doctype html>": "</body>"
