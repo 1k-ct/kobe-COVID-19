@@ -21,7 +21,15 @@ def parse_CSV_to_JSON(CSV_URL: str) -> dict:
     return json_data
 
 
+def valid_kansesya_json(json_data: dict):
+    # FIXME とりあえずのデータの行数が2000行以上なら有効
+    # データの内容が有効か
+    return len(json_data["data"]) < 600
+
+
 def load_JSON(json_data: dict, json_file: str):
+    if valid_kansesya_json(json_data):
+        return
     with open(json_file, 'w', encoding="utf-8") as f:
         json.dump(json_data, f, ensure_ascii=False, indent=4)
 
@@ -30,6 +38,11 @@ def load_script(csv_url: str, file_name: str) -> None:
     json_data = parse_CSV_to_JSON(csv_url)
     load_JSON(json_data, file_name)
     return
+
+
+def validate_kansensya_csv_file(csv_file):
+    # 取得したCSVファイルを正確な内容か検証する
+    pass
 
 
 # def setting():
