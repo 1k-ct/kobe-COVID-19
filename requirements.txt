@@ -23,7 +23,7 @@ importlib-metadata==4.6.4
 itsdangerous==2.0.1
 Jinja2==3.0.1
 MarkupSafe==2.0.1
-pycodestyle==2.7.0
+pycodestyle==2.10.0
 PySimpleGUI==4.46.0
 PySimpleGUIWeb==0.39.0
 pytchat==0.5.5
