@@ -11,7 +11,7 @@ dataclasses==0.8
 distlib==0.3.2
 Flask==2.0.1
 h11==0.12.0
-h2==4.0.0
+h2==4.1.0
 hpack==4.0.0
 HTMLParser==0.0.2
 httpcore==0.13.6
